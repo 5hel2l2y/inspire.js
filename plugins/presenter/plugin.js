@@ -1,7 +1,7 @@
 Inspire.hooks.add({
 	"init-end": me => {
 		if (window.name === "projector" && window.opener && opener.Inspire) {
-			body.classList.add("projector");
+			document.body.classList.add("projector");
 			this.presenter = opener.Inspire;
 			this.presenter.projector = this;
 		}
@@ -16,7 +16,7 @@ Inspire.hooks.add({
 			window.focus();
 
 			// Switch this one to presenter view
-			body.classList.add("presenter", "show-next");
+			document.body.classList.add("presenter", "show-next");
 		}
 	},
 	"goto-slidechanged": env => {
